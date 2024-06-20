@@ -8,10 +8,15 @@ class Todos extends Component
 {
     public $todo = '';
 
-    public $todos = [
-        'Goto to the store',
-        'Goto to the market',
-    ];
+    public $todos;
+
+    public function mount()
+    {
+        $this->todos = [
+            'Goto to the store',
+            'Goto to the market',
+        ];
+    }
 
     public function render()
     {

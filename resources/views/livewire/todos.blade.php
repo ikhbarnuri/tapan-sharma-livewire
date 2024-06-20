@@ -1,7 +1,11 @@
-<div>
+<div x-data="{count: 0}">
+    <div>
+        <span x-text="count"></span>
+        <button x-on:click="count++">+</button>
+    </div>
     <form wire:submit="addTodo">
         <input type="text" wire:model="todo"/>
-        <button type="submit">Submit</button>
+        <button @click="$wire.addTodo()" type="button">Submit</button>
     </form>
 
     <ul>
